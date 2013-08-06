@@ -1,0 +1,41 @@
+#!/bin/bash
+#
+
+# Dot-Files v1.0.0
+# [one line to give the program's name and a brief idea of what it does.]
+# www.brianspeir.com
+#
+# Copyright (C) 2013 Brian Speir. All rights reserved.
+#
+# Licensed under The BSD 3-Clause License. You may not use this file except
+# in compliance with the License. You may obtain a copy of the License at
+# http://opensource.org/licenses/BSD-3-Clause
+
+
+echo ""
+echo "Welcome to Dot-Files."
+echo ""
+
+SOURCE="https://raw.github.com/brianspeir/Dot-Files/master"
+
+shopt -s nullglob
+
+curl -L# $SOURCE/Bash/bashrc --create-dirs -o $HOME/Library/Preferences/Bash/bashrc
+curl -L# $SOURCE/Bash/inputrc --create-dirs -o $HOME/Library/Preferences/Bash/inputrc
+
+curl -L# $SOURCE/Git/attributes --create-dirs -o $HOME/Library/Preferences/Git/attributes
+curl -L# $SOURCE/Git/config --create-dirs -o $HOME/Library/Preferences/Git/config
+curl -L# $SOURCE/Git/ignore --create-dirs -o $HOME/Library/Preferences/Git/ignore
+
+curl -L# $SOURCE/Mercurial/config --create-dirs -o $HOME/Library/Preferences/Mercurial/config
+curl -L# $SOURCE/Mercurial/ignore --create-dirs -o $HOME/Library/Preferences/Mercurial/ignore
+
+curl -L# $SOURCE/Shell/aliases --create-dirs -o $HOME/Library/Preferences/Shell/aliases
+curl -L# $SOURCE/Shell/paths --create-dirs -o $HOME/Library/Preferences/Shell/paths
+curl -L# $SOURCE/Shell/profile --create-dirs -o $HOME/Library/Preferences/Shell/profile
+curl -L# $SOURCE/Shell/sources --create-dirs -o $HOME/Library/Preferences/Shell/sources
+
+curl -L# $SOURCE/SSH/config --create-dirs -o $HOME/Library/SSH/config
+
+echo ""
+echo "The installation was successful."
