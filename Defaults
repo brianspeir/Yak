@@ -39,10 +39,10 @@ else
     read 'SELECTION'
     if [[ -z "$SELECTION" ]]; then
         # Default argument.
-        SELECTION="AcrobatPro Aperture Calendar Chrome Contacts Chrome \
-        Finder Illustrator iWork Mail Messages Office Opera Photoshop Preview \
-        Quicken Safari SourceTree SublimeText Terminal UNIX SystemPreferences \
-        Utilities"
+        SELECTION="AcrobatPro Aperture Calendar Chrome Contacts EC2 Finder \
+        Illustrator iWork Mail Messages Office Opera Photoshop Preview \
+        Quicken Safari SourceTree SublimeText Terminal UNIX Vagrant \
+        SystemPreferences Utilities"
     fi
 fi
 
