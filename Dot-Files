@@ -15,6 +15,8 @@
 echo ""
 echo "Welcome to Dot-Files."
 echo ""
+echo "Please quit open apps."
+echo ""
 
 SOURCE="https://raw.github.com/brianspeir/Dot-Files/master"
 

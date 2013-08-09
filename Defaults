@@ -14,6 +14,9 @@
 
 echo ""
 echo "Welcome to Defaults."
+echo ""
+echo "Please quit open apps."
+echo ""
 echo "This software requires you restart your"
 echo "computer when the installation is done."
 echo "Are you sure you want to install now?"
