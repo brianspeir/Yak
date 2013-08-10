@@ -38,7 +38,7 @@ else
     echo "To proceed, enter the name of the Default to install."
     echo "Press Return to perform a standard installation."
     echo ""
-    echo -n "Default Name: "
+    echo -n "Install: "
     read 'SELECTION'
     if [[ -z "$SELECTION" ]]; then
         # Default argument.
@@ -55,7 +55,7 @@ if [[ "$SELECTION" == *SystemPreferences* ]]; then
     echo "To proceed, enter a name for your Mac."
     echo "Press Return to accept the default."
     echo ""
-    echo -n "Name: "
+    echo -n "Computer Name: "
     read 'COMPUTER_NAME'
     export COMPUTER_NAME
     echo ""
@@ -68,7 +68,7 @@ if [[ "$SELECTION" == *SystemPreferences* ]]; then
     MAX_BACKUP_SIZE=$(echo "scale=0; ($MAX_BACKUP_SIZE*1024)/1" | bc -l 2>/dev/null)
     export MAX_BACKUP_SIZE
 fi
-
+                                                        exit
 for f in $(echo $SELECTION); do
     echo ""
     echo "Setting up $f defaults..."
