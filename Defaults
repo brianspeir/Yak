@@ -12,6 +12,10 @@
 # http://opensource.org/licenses/BSD-3-Clause
 
 
+SOURCE="https://raw.github.com/brianspeir/Defaults/master"
+
+shopt -s nullglob
+
 echo ""
 echo "Welcome to Defaults."
 echo ""
@@ -24,10 +28,6 @@ echo ""
 echo "To proceed, enter your password, or type Ctrl-C to abort."
 echo ""
 sudo -v
-
-SOURCE="https://raw.github.com/brianspeir/Defaults/master"
-
-shopt -s nullglob
 
 if [[ -n "$1" ]]; then
     # Argument passed from the command line
@@ -68,7 +68,7 @@ if [[ "$SELECTION" == *SystemPreferences* ]]; then
     MAX_BACKUP_SIZE=$(echo "scale=0; ($MAX_BACKUP_SIZE*1024)/1" | bc -l 2>/dev/null)
     export MAX_BACKUP_SIZE
 fi
-                                                        exit
+
 for f in $(echo $SELECTION); do
     echo ""
     echo "Setting up $f defaults..."
