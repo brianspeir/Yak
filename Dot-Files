@@ -12,7 +12,16 @@
 # http://opensource.org/licenses/BSD-3-Clause
 
 
+# Dependencies ------------------------------------------------------------- #
+
+# Install UNIX defaults to create links.
+bash <(curl -s https://raw.github.com/brianspeir/Defaults/master/UNIX.defaults)
+
+# Variables ---------------------------------------------------------------- #
+
 SOURCE="https://raw.github.com/brianspeir/Dot-Files/master"
+
+# Installer ---------------------------------------------------------------- #
 
 echo ""
 echo "Welcome to Dot-Files."
@@ -36,9 +45,6 @@ curl -L# $SOURCE/Shell/profile --create-dirs -o $HOME/Library/Preferences/Shell/
 curl -L# $SOURCE/Shell/sources --create-dirs -o $HOME/Library/Preferences/Shell/sources
 
 curl -L# $SOURCE/SSH/config --create-dirs -o $HOME/Library/SSH/config
-
-# Install UNIX defaults to create links.
-bash <(curl -s https://raw.github.com/brianspeir/Defaults/master/UNIX.defaults)
 
 echo ""
 echo "The installation was successful."
