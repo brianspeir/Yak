@@ -41,3 +41,4 @@ curl -L# $SOURCE/SSH/config --create-dirs -o $HOME/Library/SSH/config
 
 echo ""
 echo "The installation was successful."
+echo ""

@@ -78,6 +78,8 @@ done
 ## Invalidate the user time stamp and require passwords again.
 sudo -k
 
+echo ""
 echo "The installation was successful."
+echo ""
 
 exit

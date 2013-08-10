@@ -12,8 +12,6 @@
 # http://opensource.org/licenses/BSD-3-Clause
 
 
-SOURCE="https://raw.github.com/brianspeir/Bundles/master"
-
 echo ""
 echo "Welcome to Bundles."
 echo ""
@@ -22,16 +20,27 @@ echo ""
 echo "To proceed, enter your password, or type Ctrl-C to abort."
 echo ""
 sudo -v
-echo ""
-echo "To proceed, enter the name of the Bundle to install."
-echo "Press Return to perform a standard installation."
-echo ""
-echo -n "Name: "
-read 'SELECTION'
-if [ -z "$SELECTION" ]; then
-    # Default argument.
-    SELECTION="Chrome CommandLineTools EC2 Firefox Fonts IRC \
-    ProjectsFolder SourceTree SublimeText Vagrant Wacom"
+
+SOURCE="https://raw.github.com/brianspeir/Bundles/master"
+
+shopt -s nullglob
+
+if [[ -n "$1" ]]; then
+    # Argument passed from the command line
+    SELECTION="$1"
+else
+    # Argument entered by the user.
+    echo ""
+    echo "To proceed, enter the name of the Bundle to install."
+    echo "Press Return to perform a standard installation."
+    echo ""
+    echo -n "Name: "
+    read 'SELECTION'
+    if [[ -z "$SELECTION" ]]; then
+        # Default argument.
+        SELECTION="Chrome CommandLineTools EC2 Firefox Fonts IRC \
+        ProjectsFolder SourceTree SublimeText Vagrant Wacom"
+    fi
 fi
 
 for f in $(echo $SELECTION); do
