@@ -12,6 +12,8 @@
 # http://opensource.org/licenses/BSD-3-Clause
 
 
+# Variables ---------------------------------------------------------------- #
+
 SOURCE="https://raw.github.com/brianspeir/Defaults/master"
 
 shopt -s nullglob
@@ -68,6 +70,8 @@ if [[ "$SELECTION" == *SystemPreferences* ]]; then
     MAX_BACKUP_SIZE=$(echo "scale=0; ($MAX_BACKUP_SIZE*1024)/1" | bc -l 2>/dev/null)
     export MAX_BACKUP_SIZE
 fi
+
+# Installer ---------------------------------------------------------------- #
 
 for f in $(echo $SELECTION); do
     echo ""

@@ -12,6 +12,10 @@
 # http://opensource.org/licenses/BSD-3-Clause
 
 
+# Variables ---------------------------------------------------------------- #
+
+SOURCE="https://raw.github.com/brianspeir/Bundles/master"
+
 echo ""
 echo "Welcome to Bundles."
 echo ""
@@ -20,8 +24,6 @@ echo ""
 echo "To proceed, enter your password, or type Ctrl-C to abort."
 echo ""
 sudo -v
-
-SOURCE="https://raw.github.com/brianspeir/Bundles/master"
 
 shopt -s nullglob
 
@@ -42,6 +44,8 @@ else
         ProjectsFolder SourceTree SublimeText Vagrant Wacom"
     fi
 fi
+
+# Installer ---------------------------------------------------------------- #
 
 for f in $(echo $SELECTION); do
     echo ""
