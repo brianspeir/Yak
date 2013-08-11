@@ -76,7 +76,7 @@ fi
 for f in $(echo $SELECTION); do
     echo ""
     echo "Setting up $f defaults..."
-    curl -Ls $SOURCE/$f.defaults | bash
+    bash <(curl -Ls $SOURCE/$f.defaults)
 done
 
 ## Invalidate the user time stamp and require passwords again.
