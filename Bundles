@@ -36,7 +36,7 @@ else
     echo "To proceed, enter the name of the Bundle to install."
     echo "Press Return to perform a standard installation."
     echo ""
-    echo -n "Name: "
+    echo -n "Install: "
     read 'SELECTION'
     if [[ -z "$SELECTION" ]]; then
         # Default argument.
