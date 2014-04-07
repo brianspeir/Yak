@@ -10,7 +10,13 @@ Copy, Paste and Install from the command-line.
 
 ```bash
 bash <(curl -s https://raw.github.com/brianspeir/YAK/master/Bundles)
+```
+
+```bash
 bash <(curl -s https://raw.github.com/brianspeir/YAK/master/Dot-Files)
+```
+
+```bash
 bash <(curl -s https://raw.github.com/brianspeir/YAK/master/Defaults)
 ```
 
