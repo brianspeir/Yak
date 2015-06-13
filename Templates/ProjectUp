@@ -27,6 +27,8 @@ fi
 # Make this name a good name.
 PROJECT_NAME="$(echo "$PROJECT_NAME" | sed 's/[^[:alnum:][:space:]-]//g;s/^[ \t]*//;s/[ \t]*$//;s/  */-/g')"
 mkdir -p $HOME/Projects/$PROJECT_NAME/Virtualization
+mkdir -p $HOME/Projects/$PROJECT_NAME/Project
+mkdir -p $HOME/Projects/$PROJECT_NAME/Archive
 
 cat > $HOME/Projects/$PROJECT_NAME/Virtualization/demand.sh <<EOF
 #!/bin/bash

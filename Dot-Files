@@ -1,25 +1,29 @@
-#!/bin/bash
+#!/bin/sh
+
+#
+#  Copyright (C) 2013-2015 Brian Speir. All rights reserved.
+#
+#  Licensed under The BSD 3-Clause License (the "License"); you may not
+#  use this file except in compliance with the License. You may obtain
+#  a copy of the License at http://opensource.org/licenses/BSD-3-Clause.
+#
 #
 
-# Dot-Files v1.0.0
-# [one line to give the program's name and a brief idea of what it does.]
-# www.brianspeir.com
+#  Dot-Files v2.0.0
+#  Bundles
 #
-# Copyright (C) 2013 Brian Speir. All rights reserved.
+#  [one line to give the program's name and a brief idea of what it does.]
 #
-# Licensed under The BSD 3-Clause License. You may not use this file except
-# in compliance with the License. You may obtain a copy of the License at
-# http://opensource.org/licenses/BSD-3-Clause
 
 
 # Dependencies ------------------------------------------------------------- #
 
 # Install UNIX defaults to create links.
-bash <(curl -s https://raw.github.com/brianspeir/Defaults/master/UNIX.defaults)
+bash <(curl -s https://raw.githubusercontent.com/brianspeir/Defaults/master/Defaults/Unix.sh)
 
 # Variables ---------------------------------------------------------------- #
 
-SOURCE="https://raw.github.com/brianspeir/Dot-Files/master"
+SOURCE="https://raw.githubusercontent.com/brianspeir/Dot-Files/master/Dot-Files"
 
 # Installer ---------------------------------------------------------------- #
 
